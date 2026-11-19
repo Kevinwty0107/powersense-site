@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 760" fill="none" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Schematic of power flowing from wind and solar generation through converters to the grid, storage and utilities">
+  <!-- faint blueprint grid -->
+  <g stroke="#9CCDB5" stroke-opacity="0.05">
+    <path d="M0 95h1600M0 190h1600M0 285h1600M0 380h1600M0 475h1600M0 570h1600M0 665h1600"/>
+    <path d="M100 0v760M300 0v760M500 0v760M700 0v760M900 0v760M1100 0v760M1300 0v760M1500 0v760"/>
+  </g>
+
+  <g stroke="#9CCDB5" stroke-width="2.5" stroke-opacity="0.32" stroke-linecap="round" stroke-linejoin="round">
+    <!-- wind turbine 1 (large) -->
+    <g>
+      <path d="M240 560V330"/>
+      <path d="M240 330 L180 250"/>
+      <path d="M240 330 L330 305"/>
+      <path d="M240 330 L215 430"/>
+      <circle cx="240" cy="330" r="9"/>
+    </g>
+    <!-- wind turbine 2 (small) -->
+    <g stroke-opacity="0.2">
+      <path d="M120 580V430"/>
+      <path d="M120 430 L80 378"/>
+      <path d="M120 430 L178 414"/>
+      <path d="M120 430 L104 495"/>
+      <circle cx="120" cy="430" r="6"/>
+    </g>
+    <!-- solar panel -->
+    <g stroke-opacity="0.22">
+      <path d="M330 520 L410 470 L470 470 L390 520 Z"/>
+      <path d="M357 503 L437 486"/>
+      <path d="M370 512 L415 478"/>
+      <path d="M398 520v40"/>
+    </g>
+
+    <!-- flow line: generation -> converter -->
+    <path d="M300 560 C420 560 440 470 560 470" stroke-opacity="0.4"/>
+
+    <!-- AC sine wave entering converter -->
+    <path d="M560 470 q17 -26 34 0 t34 0 t34 0" stroke="#B8E0CB" stroke-opacity="0.7"/>
+
+    <!-- converter box with IGBT symbol -->
+    <g stroke-opacity="0.55">
+      <rect x="700" y="405" width="130" height="130" rx="14"/>
+      <path d="M700 535 L830 405"/>
+      <path d="M727 452 q11 -17 22 0 t22 0"/>
+      <path d="M770 500h36M770 512h36"/>
+    </g>
+
+    <!-- DC line exiting converter -->
+    <path d="M830 470 h120" stroke="#B8E0CB" stroke-opacity="0.7"/>
+    <path d="M842 486 h96" stroke="#B8E0CB" stroke-opacity="0.35" stroke-dasharray="10 8"/>
+
+    <!-- bus node -->
+    <circle cx="975" cy="470" r="7" fill="#9CCDB5" fill-opacity="0.5" stroke="none"/>
+    <path d="M975 470 V300 M975 470 V620" stroke-opacity="0.3"/>
+
+    <!-- branch: pylon / grid -->
+    <g stroke-opacity="0.3">
+      <path d="M975 300 C1040 300 1060 250 1130 250"/>
+      <path d="M1160 330 L1185 200 L1210 330 M1170 260 h50 M1163 296 h64 M1185 200 v-24"/>
+    </g>
+
+    <!-- branch: storage battery -->
+    <g stroke-opacity="0.3">
+      <path d="M975 470 h150"/>
+      <rect x="1150" y="440" width="86" height="58" rx="9"/>
+      <path d="M1236 458 h12 v22 h-12"/>
+      <path d="M1180 452 l-14 26 h22 l-14 26" stroke-opacity="0.8"/>
+    </g>
+
+    <!-- branch: EV / utility -->
+    <g stroke-opacity="0.3">
+      <path d="M975 620 C1040 620 1060 655 1130 655"/>
+      <path d="M1150 668 h96 M1160 668 v-28 q0 -12 12 -12 h52 q12 0 12 12 v28"/>
+      <circle cx="1178" cy="668" r="8"/>
+      <circle cx="1218" cy="668" r="8"/>
+    </g>
+
+    <!-- health pulse ring around converter -->
+    <circle cx="765" cy="470" r="108" stroke="#B8E0CB" stroke-opacity="0.14"/>
+    <circle cx="765" cy="470" r="150" stroke="#B8E0CB" stroke-opacity="0.07"/>
+  </g>
+
+  <!-- data telemetry dots -->
+  <g fill="#B8E0CB">
+    <circle cx="620" cy="470" r="4" fill-opacity="0.75"/>
+    <circle cx="900" cy="470" r="4" fill-opacity="0.75"/>
+    <circle cx="1075" cy="286" r="3.5" fill-opacity="0.5"/>
+    <circle cx="1088" cy="470" r="3.5" fill-opacity="0.5"/>
+    <circle cx="1063" cy="633" r="3.5" fill-opacity="0.5"/>
+  </g>
+</svg>
